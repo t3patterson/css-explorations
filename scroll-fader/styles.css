@@ -12,43 +12,22 @@ h1{
   margin-bottom: 50px;
 }
 
-.fade-in-box{
+#data-box{
   max-height: 600px;
   position: relative;
   overflow: scroll;
-
 }
-  .fade-in-box > * {
-    overflow: scroll;
-    max-height: 600px;
 
-  }
 
-/*  .box-overlay{
-    background: rgba(224, 130, 131, .3);
-    z-index: 1;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    position: absolute;
-  }*/
-
-  .data-visible{
-    z-index: 2;
-    position: relative;
-  }
-
-  
-
-  .data-visible:after{
-    display: block;
-    position: absolute;
-    content: "";
-    left: 0px;
-    top: 0px;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(transparent, rgba(200,200,200,.7));
-  }
+.fader-js:after{
+  display: block;
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(200,200,200,.7));
 }
 
 .ui.items {

@@ -1900,3 +1900,38 @@ var dataSet = [
     "registered": "2014-10-23T01:09:11 +05:00"
   }
 ]
+
+var dataVisible_el  = document.querySelector('.fader-js')
+dataVisible_el.id = "data-box"
+dataVisible_el.className += " ui items"
+
+
+// Populate
+var bigHTMLString  = ''
+
+for (var i = 0; i < dataSet.length ; i++){
+  var u = dataSet[i]
+  var userDescTemplate = `
+  <div class="item">
+     <div class="image">
+       <img src="${u.pictures.medium}">
+     </div>
+     <div class="content">
+       <a class="header" href="#">${dataSet[i].name}</a>
+       <div class="meta">
+         <span>About Me</span>
+       </div>
+       <div class="description">
+         <p>${u.about}</p>
+       </div>
+       <div class="extra">
+         ${u.email}
+       </div>
+     </div>
+   </div>
+   <hr />`
+
+   bigHTMLString += userDescTemplate
+}
+
+dataVisible_el.innerHTML = bigHTMLString

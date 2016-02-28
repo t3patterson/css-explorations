@@ -1,15 +1,12 @@
-var dataVisible_el  = document.querySelector('.fade-in-box > .data-visible')
-var scrollTopPos = dataVisible_el.scrollTop
+var faderScrollBox  = document.querySelector('.fader-js')
 
-dataVisible_el.className += " ui items"
-
-// Create New Stylesheet
+// Create ad-hoc style sheet and append to head
 var style = document.createElement("style");
 document.head.appendChild(style);
 var sheet = style.sheet
 
-//Create Function to Set Fader
-var resetPseudoStyle = function (pos){
+//Create Function to set style-rule (ie.  :after 'top' property's value )
+var setPseudoStyle = function (pos){
   return `.fader-js:after {
   display: block;
   position: absolute;
@@ -22,45 +19,24 @@ var resetPseudoStyle = function (pos){
   `
 }
 
-sheet.insertRule(resetPseudoStyle(0),0)
+// insert the style-rule on ad-hoc style sheet 
+sheet.insertRule(setPseudoStyle(faderScrollBox.scrollTop),0)
 
+//add event listener to scroll event on our fader-scroll-box
+//   (event will fire when we scroll on that div)
+faderScrollBox.addEventListener('scroll', function(){
 
-var bigHTMLString  = ''
-for (var i = 0; i < dataSet.length ; i++){
-  var u = dataSet[i]
-  var userDescTemplate = `<div class="item">
-                       <div class="image">
-                         <img src="${u.pictures.medium}">
-                       </div>
-                       <div class="content">
-                         <a class="header" href="#">${dataSet[i].name}</a>
-                         <div class="meta">
-                           <span>About Me</span>
-                         </div>
-                         <div class="description">
-                           <p>${u.about}</p>
-                         </div>
-                         <div class="extra">
-                           ${u.email}
-                         </div>
-                       </div>
-                     </div>
-                     <hr />`
-
-   bigHTMLString += userDescTemplate
-}
-
-
-dataVisible_el.addEventListener('scroll', function(){
-  var after = window.getComputedStyle(dataVisible_el, ':after')
-  // dataVisible_el.dataset.scrollpos = parseInt( dataVisible_el.scrollTop )
-
+  //remove the old style-rule from the ad-hoc stylesheet
   sheet.removeRule(0)
-  var newRule = resetPseudoStyle(parseInt( dataVisible_el.scrollTop ))
+  
+  //create the new rule and set 'top' with updated scroll position relative 
+  // to top of element
+  var newRule = setPseudoStyle(parseInt( faderScrollBox.scrollTop ))
+
+  //insert new style-rule into ad-hoc stylesheet
   sheet.insertRule(newRule,0)
 
 
 })
 
-dataVisible_el.innerHTML = bigHTMLString
 
