@@ -7,16 +7,17 @@ var sheet = style.sheet
 
 //Create Function to set style-rule (ie.  :after 'top' property's value )
 var setPseudoStyle = function (pos){
-  return `.fader-js:after {
-  display: block;
-  position: absolute;
-  content: "";
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0), rgba(255,255,255,1));
-  top: ${pos}px;
-  `
+  var styleRule = '.fader-js:after {'
+      styleRule += 'display: block;'
+      styleRule += 'position: absolute;'
+      styleRule += 'content: "";'
+      styleRule += 'left: 0px;'
+      styleRule += 'height: 100%;'
+      styleRule += 'width: 100%;'
+      styleRule += 'background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0), rgba(255,255,255,1));'
+      styleRule += 'top:'+pos+'px;'
+  
+  return styleRule
 }
 
 // insert the style-rule on ad-hoc style sheet 
