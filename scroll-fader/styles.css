@@ -4,27 +4,35 @@
 #container{
   max-width: 920px;
   margin: 0 auto;
-  padding-top: 40px;
-}
-
-h1{
-  color: #913D88;
-  margin-bottom: 50px;
+  padding: 20px 10px 0 10px;
 }
 
 #data-box{
   max-height: 600px;
   position: relative;
   overflow: scroll;
+  padding-top: 170px;
 }
 
+h1{
+  
+}
+
+h3{
+  color: #913D88;
+  top: -170px;
+  position: relative;
+  z-index: 4;
+  font-size: 48px;
+  margin-bottom: -170px;
+}
 
 .fader-js:after{
   display: block;
   position: absolute;
   content: "";
   left: 0px;
-  top: 0px;
+  top: -0px;
   height: 100%;
   width: 100%;
   background: linear-gradient(transparent, rgba(200,200,200,.7));

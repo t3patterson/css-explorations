@@ -1934,4 +1934,4 @@ for (var i = 0; i < dataSet.length ; i++){
    bigHTMLString += userDescTemplate
 }
 
-dataVisible_el.innerHTML = bigHTMLString
+dataVisible_el.innerHTML += bigHTMLString

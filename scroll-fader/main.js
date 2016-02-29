@@ -14,7 +14,7 @@ var setPseudoStyle = function (pos){
   left: 0px;
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgba(255,255,255,1) -20%, rgba(255,255,255,0), rgba(255,255,255,1));
+  background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0), rgba(255,255,255,1));
   top: ${pos}px;
   `
 }
@@ -31,7 +31,7 @@ faderScrollBox.addEventListener('scroll', function(){
   
   //create the new rule and set 'top' with updated scroll position relative 
   // to top of element
-  var newRule = setPseudoStyle(parseInt( faderScrollBox.scrollTop ))
+  var newRule = setPseudoStyle(parseInt( faderScrollBox.scrollTop ), 0)
 
   //insert new style-rule into ad-hoc stylesheet
   sheet.insertRule(newRule,0)
