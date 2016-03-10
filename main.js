@@ -17,7 +17,12 @@ var cssSnippetsList = [
   {
     title: 'Flip Switch',
     dir: 'on-off-flipswitch'
+  },
+  {
+    title: 'Collapsible Icons',
+    dir: 'collapsible-icons'
   }
+
 ]
 
 console.log(cssSnippetsList)

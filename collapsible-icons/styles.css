@@ -1,55 +1,132 @@
-.flip-card {
+.collapsible-icons{
   position: relative;
-  height: 250px;
-  width: 250px;
-  perspective: 1000px;
+  overflow: hidden;
 }
 
-.flip-card .card-side {
+.icons-container{
+  position: relative;
+}
+
+
+.collapsible-icons div.select-mask,
+.collapsible-icons input{
+  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transition: .7s all;
-  transform-style: preserve-3d;
+  cursor: pointer;
+  
+  /*sizing*/
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
 }
 
-.flip-card .card-side.side-a {
-  transform: rotateY(0deg);
-  background: #e74c3c;
-  z-index: 1;
+.collapsible-icons input{
+  opacity: 0;
+  z-index: 3;
 }
 
-.flip-card .card-side.side-b {
-  transform: rotateY(180deg);
-  background: #3498db;
+.collapsible-icons div.select-mask{
+  text-align: center;
   z-index: 2;
+ 
+  /*style-ops*/
+  border: 1px solid #333;
+  background: #D64541;
+  font-size: 30px;
+  line-height: 45px;
 }
 
-.flip-card:hover .side-a {
-  transform: rotateY(-180deg);
+.collapsible-icons ul.icon-boxes {
+  position: absolute;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  width: 100%;
+  z-index: 1;
+  
+
 }
 
-.flip-card:hover .side-b {
-  transform: rotateY(0deg);
+.collapsible-icons ul.icon-boxes > * {
+  font-size: medium;
+  /*sizing*/
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  text-align: center;
+
+  /*style-ops*/
+  background: #03A678;
+  color: #fff;
+  border-left: 1px solid #333;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  
 }
+
+
+/*HORIZONTAL*/
+/*-----------*/
+
+.collapsible-icons.horizontal{
+  width: 250px;
+  height: 50px;
+}
+
+.collapsible-icons.horizontal ul.icon-boxes > * {
+  display: inline-block;
+}
+
+.collapsible-icons.horizontal div.select-mask,
+.collapsible-icons.horizontal input {
+  /*Transition Value*/
+  left: 0%;
+}
+
+.collapsible-icons.horizontal ul.icon-boxes {
+  /*Transition Value*/
+  left: -80%;
+}
+
+
+  /*HORIZONTAL TRANSITION*/
+  .collapsible-icons.horizontal div.select-mask,
+  .collapsible-icons.horizontal input:checked,
+  ul.icon-boxes{
+    transition: left .3s;
+  }
+
+  .collapsible-icons.horizontal input:checked ~ div.select-mask,
+  .collapsible-icons.horizontal input:checked {
+    left: 80%;
+  }
+
+  .collapsible-icons.horizontal input:checked ~ ul.icon-boxes {
+    left: 0%;
+  }
+
+
+/*VERTICAL*/
+/*-----------*/
+
+
+
+
 
 /* - Configuration  - */
 
-body {
-  margin: 10px;
+*{
+  box-sizing: border-box;
 }
 
-h3 {
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  font-size: 60px;
-  border: 1px solid #333;
-  line-height: 80px;
-  width: 80px;
-  border-radius: 50%;
+#container{
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px 10px 0 10px;
+  font-family: Helvetica;
 }
+
+h1{
+  font-weight: 400;
+}
+
