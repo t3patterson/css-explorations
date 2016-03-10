@@ -13,10 +13,14 @@ var cssSnippetsList = [
   {
     title: 'Flippy Card',
     dir: 'flippy-card'
+  },
+  {
+    title: 'Flip Switch',
+    dir: 'on-off-flipswitch'
   }
 ]
 
-
+console.log(cssSnippetsList)
 
 var listContainer_el = document.querySelector('ul')
 createList(listContainer_el, cssSnippetsList)

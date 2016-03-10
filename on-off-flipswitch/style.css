@@ -1,0 +1,117 @@
+
+.flip-switch-box{
+  font-size: 0;
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  z-index: 1;
+  transition: all 1s;
+
+}
+
+.switch > * {
+  line-height: 50px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: medium;
+
+}
+
+.flip-switch-box .on, 
+.flip-switch-box .off{
+  width: 100px;
+  text-align: center;
+}
+
+
+.flip-switch-box .on{
+  background: #5C97BF;
+}
+
+.flip-switch-box .off{
+  background: #ddd;
+}
+
+.flip-switch-box .knob{
+  background: #777;
+  width: 50px;
+  height: 50px;
+}
+
+
+
+.flip-switch-box input{
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.flip-switch-box input:checked ~ .switch {
+  top: 0;
+  left: -100px;
+}
+
+
+/*Explanation------*/
+
+#demo-explanation .flip-switch-box{
+  overflow: inherit;
+}
+
+#demo-explanation .cover{
+  position: absolute;
+  top: 0;
+  height: 50px;
+  width: 100px;
+  background: rgba(255,255,255,.7);
+}
+
+#demo-explanation .cover.lft{
+  left: -100px;
+  z-index: 5;
+}
+
+#demo-explanation .cover.rht{
+  right: -100px;
+  z-index: 5;
+}
+
+
+/*Configuration*/
+body{
+  font-family: Helvetica;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h2{
+  font-weight: 200;
+
+}
+
+section{
+  margin: 50px auto;
+  width: 300px;
+  text-align: center;
+
+}
+
+
