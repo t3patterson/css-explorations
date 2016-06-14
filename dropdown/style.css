@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  transition: all .2s;
+}
+
+.container{
+  max-width: 720px;
+  margin: auto;
+  font-family: Helvetica;
+}
+
+h1{
+  font-weight: 200;
+}
+
+.drop-down {
+  font-size: 21px;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.drop-down.showing{
+  max-height: 1000px;
+}
+
+.drop-down ul, .drop-down div {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.drop-down li, .drop-down div {
+  display: block;
+  padding-left: 10px;
+  font-size: 21px;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+}
+.drop-down li{
+  border: 1px #333 solid;
+}
+
+.drop-down li:hover {
+  background: #89C4F4;
+}
+
+.current-selection{
+  background: #F4B350;
+  border: 1px #333 solid;
+  position: relative;
+}
+
+.current-selection .lines-indicator{
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 40px;
+}
+
+.lines-indicator span:nth-child(1){
+  position: absolute;
+  top: 50% ; left: 50%;
+  width: 30px; height: 5px;
+  background: #019875;
+  transform: translate(-50%, -50%);
+}
+
+.lines-indicator span:nth-child(2){
+  position: absolute;
+  top: 50% ; left: 50%;
+  width: 5px; height: 30px;
+  background: #019875;
+  transform: translate(-50%, -50%);
+
+}
+
+.lines-indicator.showing span:nth-child(2){
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.current-selection .selection-text{
+  margin-left: 40px;
+  padding-left: 10px;
+}
+
+.next-up{
+  position: relative;
+  top: -100%;
+}
+.no-op{
+  color: #888;
+}
