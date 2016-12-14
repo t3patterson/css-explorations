@@ -1,0 +1,47 @@
+@import "./imports/_normalize.scss";
+
+*{ box-sizing: border-box }
+img {
+   width: 100%;
+   display: block;
+}
+
+
+$box-width: 40vw;
+$box-height: 40vh;
+
+div{
+	background: #C0392B;
+	color: #fff;
+	width: $box-width;
+	height: $box-height;
+	margin: #{(100vh - $box-height)/2} #{(100vw - $box-width)/2} ;
+}
+
+section{
+	width: 100vw;
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+section:nth-of-type(1){background-image: url(https://unsplash.it/1024/683?image=10);}
+section:nth-of-type(2){background-image: url(https://unsplash.it/1024/683?image=12);}
+section:nth-of-type(3){background-image: url(https://unsplash.it/1024/683?image=14);}
+section:nth-of-type(4){background-image: url(https://unsplash.it/1024/683?image=18);}
+
+// demo
+section{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	 p {
+		padding: 15px;
+		color: #fff;
+		background: rgba(10,10,10,.44);
+		font-size: 2rem;
+		text-align: center;
+	}
+}
