@@ -1,0 +1,53 @@
+@import "./imports/_normalize.scss";
+
+*{ box-sizing: border-box }
+img {
+   width: 100%;
+   display: block;
+}
+nav{background: #F9BF3B; padding: 5px; 	text-align: center; i{margin-bottom: 20px;}}
+aside{background: #F2784B;}
+main{padding: 12px;}
+
+
+$left-bar: 5rem;
+$right-bar: 15rem;
+
+nav{
+	position: fixed;
+	top: 0; left: 0;
+	width: $left-bar;
+	height: 100%;
+}
+
+aside{
+	position: fixed;
+	width: $right-bar;
+	height: 100%;
+	top: 0;
+	right: 0;
+}
+
+main {
+	margin-left: $left-bar;
+	width: calc(100% - #{$left-bar + $right-bar});
+}
+
+@media screen and (min-width: 768px){
+	$left-bar: 8rem;
+	$right-bar: 30rem;
+
+	nav{
+		width: $left-bar;
+	}
+
+	aside{
+		position: fixed;
+		width: $right-bar;
+	}
+
+	main {
+		margin-left: $left-bar;
+		width: calc(100% - #{$left-bar + $right-bar});
+	}
+}

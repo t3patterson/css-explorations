@@ -1,0 +1,69 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>PROJECT</title>
+      <link rel="stylesheet" href="./css/lib/font-awesome.min.css">
+      <link rel="stylesheet" href="./css/lib/bootstrap.min.css" >
+      <link rel="stylesheet" href="./css/styles.css">
+   </head>
+   <body>
+      <nav>
+      	<div><i class="fa fa-compass fa-3x"></i></div>
+      	<div><i class="fa fa-flash fa-3x"></i></div>
+      	<div><i class="fa fa-search fa-3x"></i></div>
+      	<div><i class="fa fa-wrench fa-3x"></i></div>
+
+      </nav>
+		<aside>
+			<h4>To Do</h4>
+			<ul>
+				<li>Wash Cat</li>
+				<li>Wash Dog</li>
+				<li>Wash Car</li>
+			</ul>
+		</aside>
+		<main>
+			<h2>Fixed-fluid-fixed</h2>
+
+<h4>The (S)CSS</h4>
+<pre>			
+$left-bar: 5rem;
+$right-bar: 15rem;
+
+nav{
+	position: fixed;
+	top: 0; left: 0;
+	width: $left-bar;
+	height: 100%;
+}
+
+aside{
+	position: fixed;
+	width: $right-bar;
+	height: 100%;
+	top: 0;
+	right: 0;
+}
+
+main {
+	margin-left: $left-bar;
+	<mark>width: calc(100% - #{$left-bar + $right-bar});</mark>
+}
+</pre>
+
+			<p>Oh, yes, there absolutely will be a margarita made in my mouth. Look what the homosexuals have done to me! You can't just comb that out and reset it? Look at us, crying like a bunch of girls on the last day of camp.</p>
+
+			<p>They don't appreciate him. It's his glasses… they make him look like a lizard. Plus he's self-conscious. Shémale. If I look like a man who made love to his wife last night – it's because I almost did. Could it be love? I know what an erection feels like, Michael. No, it's the opposite. It's like my heart is getting hard.</p>
+
+			<p>I spent so much time making sweet love on my wife that it's hard to hear anything over the clatter of her breasts. Go ahead, touch the cornballer. I've been in the film business for a while but I just can't seem to get one in the can. You can control your bladder when you're dead! Daddy horny, Michael. If I make this comeback, I'll buy you a hundred George Michaels that you can teach to drive!</p>
+
+			<p>Oh Gob, you could charm the black off a telegram boy. But I'm the oldest. The matriarch if you will. So did you see the new Poof? His name's Gary and we don't need anymore lawsuits. Today I learned this is a real place, tho more lush than the OC. I call it Tricks –- wait for it – Around The Office. I'm gonna build me an airport, put my name on it. Why, Michael? So you can fly away from your feelings? How am I supposed to find someone willing to go into that musty old claptrap?</p>
+	</main>
+      
+		<script src="./js/lib/jquery.min.js"></script>
+      <script src="./js/lib/underscore.min.js"></script>
+      <script src="./js/lib/backbone.min.js"></script>
+      <script src="./js/app.js"></script>
+   </body>
+</html>
