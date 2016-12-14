@@ -21,7 +21,19 @@ var cssSnippetsList = [
   {
     title: 'Collapsible Icons',
     dir: 'collapsible-icons'
-  }
+  },
+   {
+     title: 'Omit styles with <code>:not(:empty)</code>',
+     dir: 'non-empty-el-styles'
+   },
+   {
+     title: 'Fixed - Fluid - Fixed Layout',
+     dir: 'fixed-fluid-fixed-layout'
+   },
+   {
+     title: 'Dynamic Sizing Using <code>vw</code> & <code>vh</code>',
+     dir: 'dynamic-sizing'
+   }
 
 ]
 
